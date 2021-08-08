@@ -74,7 +74,7 @@ body {
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 //@import "datepicker";
-//@import "lightgallery";
+@import "lightgallery";
 //@import "pagging";
 @import "popup";
 @import "header";
@@ -97,6 +97,10 @@ body {
   &__services {
     @include adaptiv-value("padding-top", 90, 40, 1);
   }
+  &__works {
+    @include adaptiv-value("padding-top", 90, 40, 1);
+    padding-bottom: 50px;
+  }
 }
 //===================================================================================================================================
 .services {
@@ -105,7 +109,7 @@ body {
       padding: 0; 
     }
   }
-  &__body {
+  &__content {
     display: flex;
     flex-direction: column;
   }
@@ -247,8 +251,76 @@ body {
     &__text {
       color: $mainColor;
       font-weight: 300;
-      line-height: 18 / 48 * 100%;
+      line-height: 160%;
     }
   } 
+}
+//============================================================================
+.works {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__row {
+    display: flex;
+    margin: 0px -14px 30px -14px;
+    @media (max-width:$md3+px){
+      overflow: auto;
+      margin: 0px -7.5px 30px -7.5px;
+      padding: 0px 0px 25px 0px; 
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 33.333%;
+    padding: 0px 14px;
+    &:nth-child(2) {
+      flex-direction: column-reverse;
+      .works__image {
+        margin: 0;
+        &:last-child{
+          margin: 0px 0px 30px 0px;
+          @media (max-width:$md3+px){
+             margin: 0px 0px 15px 0px; 
+          }
+        }
+      }
+    }
+    @media (max-width:$md3+px){
+      flex: 0 0 60%; 
+      padding: 0px 7.5px;
+    }
+  }
+  &__image {
+    position: relative;
+    background-color: #e5e5e5;
+    padding: 0px 0px 100% 0px;
+    &:first-child{
+      margin: 0px 0px 30px 0px;
+      @media (max-width:$md3+px){
+        margin: 0px 0px 15px 0px; 
+      }
+    }
+    &_big {
+      padding: 0px 0px 161.8% 0px;
+      .item-hover {
+        height: 100%-43.050%-5.084%;
+        top: 254px;
+      }
+    }
+    @media (any-hover: hover){
+      &:hover{
+        .item-hover {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__button {
+    align-self: center;
+  }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
