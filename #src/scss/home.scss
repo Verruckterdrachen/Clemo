@@ -23,8 +23,8 @@
     }
   }
   &__title {
-    @include adaptiv-value("margin-bottom", 25, 15, 1);
-    @include adaptiv-value("padding-bottom", 32, 20, 1);
+    @include adaptiv-value("margin-bottom", 25, 12.5, 1);
+    @include adaptiv-value("padding-bottom", 35, 25, 1);
     position: relative;
     &::before{
       content:'';

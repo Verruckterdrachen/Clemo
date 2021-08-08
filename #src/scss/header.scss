@@ -2,10 +2,10 @@
 .header {
   &._scroll {
     .header__wrapper {
-      background-color: rgba(255,255,255,0.8);
+      background-color: rgba(255,255,255,0.85);
       @media (any-hover: hover){
         &:hover{
-          background-color: rgba(255,255,255,0.9);
+          background-color: rgba(255,255,255,0.95);
         }
       }
     }
@@ -65,7 +65,7 @@
       overflow: auto;
       top: 0;
       right: -100%;
-      background-color: #f4f4f4; 
+      background-color: $primaryColor; 
       transition: right 0.3s ease 0s;
       padding: 100px 15px 30px 15px;
       &::before{
@@ -76,7 +76,7 @@
         top: 0;
         right: -100%;
         transition: right 0.3s ease 0s;
-        background-color: #f4f4f4;
+        background-color: $primaryColor;
         z-index: 2;
       }
       &._active {

@@ -94,7 +94,99 @@ body {
       margin: 60px 0px 0px 0px;
     }
   }
+  &__services {
+    @include adaptiv-value("padding-top", 90, 40, 1);
+  }
 }
 //===================================================================================================================================
-
+.services {
+  &__container {
+    @media (max-width:$md3+px){
+      padding: 0; 
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.item-services {
+  @media (min-width:$md3+px){
+    display: flex;
+    align-items: flex-start; 
+  }
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+    .item-services__content {
+      @media (min-width:$md3+px){
+        @include adaptiv-value("margin-right", 90, 0, 1);
+        margin-left: 0; 
+        padding: 0;
+      }
+      padding: 15px;
+    }
+  }
+  &:not(:last-child) {
+    @include adaptiv-value("margin-bottom", 100, 50, 1);
+  }
+  &__image {
+    @media (min-width:$md3+px){
+      flex: 0 0 560px/1148px * 100%;
+      padding: 0px 0px 560px/1148px * 100% 0px;
+      margin-bottom: 0; 
+    }
+    padding: 0px 0px 100% 0px;
+    margin: 0px 0px 20px 0px;
+    background-color: #e5e5e5;
+  }
+  &__content {
+    flex: 0 1 50%;
+    @media (min-width:$md3+px){
+      @include adaptiv-value("margin-left", 90, 0, 1);
+      padding: 0; 
+    }
+    padding: 15px;
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__head {
+    @include adaptiv-value("margin-bottom", 25, 12.5, 1);
+    @include adaptiv-value("padding-bottom", 25, 15, 1);
+    position: relative;
+    &::before{
+      content:'';
+      position: absolute;
+      width: 55px;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: $mainColor;
+    }
+  }
+  &__suptitle {
+    @include adaptiv-value("font-size", 30, 22, 1);
+    font-weight: 400;
+    line-height: 24 / 30 * 100%;
+    margin: 0px 0px 5px/30px * 1em 0px;
+  }
+  &__title {
+    @include adaptiv-value("font-size", 48, 34, 1);
+    font-weight: 700;
+    line-height: 48 / 48 * 100%;
+  }
+  &__text {
+    @include adaptiv-value("font-size", 18, 16, 1);
+    color: $grayColor;
+    font-weight: 300;
+    line-height: 27 / 18 * 100%;
+    @include adaptiv-value("margin-bottom", 45, 25, 1);
+    p {
+      @include adaptiv-value("margin-bottom", 30, 15, 1);
+    }
+  }
+  &__button {
+    margin: 0px 0px 30px 0px;
+  }
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
