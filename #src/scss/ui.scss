@@ -1,5 +1,31 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
-
+.title {
+  color: $mainColor;
+  @include adaptiv-value("font-size", 48, 28, 1);
+  line-height: 24 / 48 * 100%;
+  font-weight: 700;
+}
+//============================================================================
+.swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.swiper-pagination-bullet {
+  flex: 0 0 13px;
+  height: 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid $mainColor;
+  transition: all 0.3s ease 0s;
+}
+.swiper-pagination-bullet-active {
+  background-color: $mainColor;
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================

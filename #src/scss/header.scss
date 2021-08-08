@@ -65,7 +65,7 @@
       overflow: auto;
       top: 0;
       right: -100%;
-      background-color: $primaryColor; 
+      background-color: #f4f4f4; 
       transition: right 0.3s ease 0s;
       padding: 100px 15px 30px 15px;
       &::before{
@@ -76,7 +76,7 @@
         top: 0;
         right: -100%;
         transition: right 0.3s ease 0s;
-        background-color: $primaryColor;
+        background-color: #f4f4f4;
         z-index: 2;
       }
       &._active {
