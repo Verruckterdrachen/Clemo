@@ -1354,15 +1354,19 @@ body.ie ._ibg img {
 }
 .item-services__image {
   position: relative;
-  padding: 0px 0px 100% 0px;
-  margin: 0px 0px 20px 0px;
   background-color: #e5e5e5;
 }
 @media (min-width: 767.98px) {
   .item-services__image {
     flex: 0 0 48.7804878049%;
     padding: 0px 0px 48.7804878049% 0px;
-    margin-bottom: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .item-services__image {
+    display: block;
+    padding: 0px 0px 100% 0px;
+    margin: 0px 0px 20px 0px;
   }
 }
 @media (any-hover: hover) {
@@ -1471,40 +1475,47 @@ body.ie ._ibg img {
   margin: 0px 0px 30px 0px;
 }
 
-.item-hover {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 84.616%;
-  height: 84.616%;
-  top: 7.692%;
-  left: 7.692%;
-  opacity: 0;
-  visibility: hidden;
-  background-color: #ffe1bd;
-  transition: all 0.3s ease 0s;
-  padding: 80px;
+@media (any-hover: none) {
+  .item-hover {
+    display: none;
+  }
 }
-.item-hover__title {
-  padding: 0px 0px 30px 0px;
-  margin: 0px 0px 45px 0px;
-  position: relative;
-}
-.item-hover__title::before {
-  content: "";
-  position: absolute;
-  width: 55px;
-  height: 2px;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 0px);
-  background-color: #000;
-}
-.item-hover__text {
-  color: #000;
-  font-weight: 300;
-  line-height: 37.5%;
+@media (any-hover: hover) {
+  .item-hover {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 84.616%;
+    height: 84.616%;
+    top: 7.692%;
+    left: 7.692%;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #ffe1bd;
+    transition: all 0.3s ease 0s;
+    padding: 80px;
+  }
+  .item-hover__title {
+    padding: 0px 0px 30px 0px;
+    margin: 0px 0px 45px 0px;
+    position: relative;
+  }
+  .item-hover__title::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0px);
+    background-color: #000;
+  }
+  .item-hover__text {
+    color: #000;
+    font-weight: 300;
+    line-height: 37.5%;
+  }
 }
