@@ -1112,6 +1112,31 @@ body.ie ._ibg img {
 	}
 }
 */
+.footer__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 134px;
+}
+@media (max-width: 1178px) {
+  .footer__body {
+    min-height: calc(80px + 54 * ((100vw - 320px) / 858));
+  }
+}
+.footer__title {
+  font-weight: 700;
+  line-height: 133.3333333333%;
+  margin: 0px 0px 0.5555555556em 0px;
+}
+.footer__copy {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 77.7777777778%;
+  color: #656565;
+}
+
 @media (max-width: 767.98px) {
   .hello__container {
     padding: 0;
