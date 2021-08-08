@@ -8,7 +8,7 @@
 .title-section {
   text-align: center;
   color: $mainColor;
-  @include adaptiv-value("font-size", 60, 32, 1);
+  @include adaptiv-value("font-size", 60, 34, 1);
   line-height: 48 / 60 * 100%;
   font-weight: 100;
   &_white {

@@ -101,6 +101,10 @@ body {
     @include adaptiv-value("padding-top", 90, 40, 1);
     padding-bottom: 50px;
   }
+  &__team {
+    @include adaptiv-value("padding-top", 90, 40, 1);
+    @include adaptiv-value("padding-bottom", 100, 40, 1);
+  }
 }
 //===================================================================================================================================
 .services {
@@ -321,6 +325,94 @@ body {
   }
   &__button {
     align-self: center;
+  }
+}
+//============================================================================
+.team {
+  background-color: $primaryColor;
+}
+.slider-team {
+  position: relative;
+  &__body {
+    margin: 0px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  &__image {
+    flex: 0 0 168px;
+    width: 168px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0px 0px 168px 0px;
+    margin: 0px 0px 10px 0px;
+    overflow: hidden;
+  }
+  &__title {
+    margin: 0px 0px 12px/40px * 1em 0px;
+    padding: 0px 0px 20px 0px;
+    max-width: 237px;
+    position: relative;
+    &::before{
+      content:'';
+      position: absolute;
+      width: 55px;
+      height: 2px;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%,0px);
+      background-color: $mainColor;
+    }
+  }
+  &__text {
+    line-height: 48 / 18 * 100%;
+  }
+  &__dotts {
+    .swiper-pagination-bullet {
+      margin: 0px 8px;
+    }
+  }
+  &__arrows {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0px,-50%);
+    width: calc(100% + 10px);
+    left: -5px;
+    z-index: 5;
+    justify-content: space-between;
+  }
+}
+//============================================================================
+.slider-arrows {
+  display: grid;
+  grid-template-columns: repeat(2,40px);
+  column-gap: 8px;
+  @media (max-width:$md3+px){
+    display: none; 
+  }
+}
+.slider-arrow {
+  pointer-events: auto;
+  color: #000;
+  font-size: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover){
+    &:hover{
+      color: #fff;
+    }
+  }
+  &_prev {
+    &::before{
+      transform: rotate(-180deg);
+    }
   }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
