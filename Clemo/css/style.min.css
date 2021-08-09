@@ -194,6 +194,14 @@ body._lock {
     background-color: #ffe1bd;
   }
 }
+.button_white {
+  background-color: #fff;
+}
+@media (any-hover: hover) {
+  .button_white:hover {
+    background-color: #ffe1bd;
+  }
+}
 .button_primary {
   color: #000;
   border: 1px solid #d8d8d8;
@@ -203,6 +211,42 @@ body._lock {
   .button_primary:hover {
     border: 1px solid #000;
   }
+}
+
+.subscribe__form .form__error {
+  position: absolute;
+  top: 82%;
+  left: 0;
+  color: tomato;
+  font-weight: 400;
+}
+.subscribe__body {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 80px 0px;
+  margin: 0px 0px 50px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+.subscribe__input {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0px 0px 15px 0px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 133.3333333333%;
+  background-color: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+@media (max-width: 1178px) {
+  .subscribe__input {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 858));
+  }
+}
+.subscribe__input:not(:last-child) {
+  margin: 0px 0px 40px 0px;
+}
+.subscribe__button {
+  padding: 0px 45px;
 }
 
 .select {
@@ -2339,13 +2383,27 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     padding-bottom: calc(50px + 50 * ((100vw - 320px) / 858));
   }
 }
+.page__feedback {
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+@media (max-width: 1178px) {
+  .page__feedback {
+    padding-top: calc(40px + 50 * ((100vw - 320px) / 858));
+  }
+}
+@media (max-width: 1178px) {
+  .page__feedback {
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 858));
+  }
+}
 
 @media (max-width: 767.98px) {
   .services__container {
     padding: 0;
   }
 }
-.services__content {
+.services__body {
   display: flex;
   flex-direction: column;
 }
@@ -2812,4 +2870,108 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 .slider-reviews__dotts .swiper-pagination-bullet {
   margin: 0px 8px;
+}
+
+.feedback {
+  color: #fff;
+  background-color: #000;
+}
+@media (min-width: 767.98px) {
+  .feedback__body {
+    display: flex;
+  }
+}
+.feedback__content {
+  flex: 0 1 50%;
+  margin-bottom: 60px;
+}
+@media (max-width: 1178px) {
+  .feedback__content {
+    margin-bottom: calc(30px + 30 * ((100vw - 320px) / 858));
+  }
+}
+@media (min-width: 767.98px) {
+  .feedback__content {
+    padding-right: 100px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1178px) {
+  .feedback__content {
+    padding-right: calc(0px + 100 * ((100vw - 320px) / 858));
+  }
+}
+.feedback__items {
+  margin-bottom: 40px;
+}
+@media (max-width: 1178px) {
+  .feedback__items {
+    margin-bottom: calc(30px + 10 * ((100vw - 320px) / 858));
+  }
+}
+.feedback__items a {
+  transition: color 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .feedback__items a:hover {
+    color: #ffe1bd;
+  }
+}
+.feedback__item {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 300;
+  line-height: 150%;
+  color: #fff;
+  font-size: 18px;
+}
+@media (max-width: 1178px) {
+  .feedback__item {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 858));
+  }
+}
+.feedback__item::before {
+  padding: 0px 15px 0px 0px;
+  line-height: 150%;
+}
+.feedback__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media (max-width: 1178px) {
+  .feedback__item:not(:last-child) {
+    margin-bottom: calc(20px + 10 * ((100vw - 320px) / 858));
+  }
+}
+.feedback__social {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+@media (max-width: 767.98px) {
+  .feedback__social {
+    justify-content: space-evenly;
+  }
+}
+.feedback__icon {
+  color: #fff;
+  font-size: 40px;
+  transition: color 0.3s ease 0s;
+}
+@media (max-width: 1178px) {
+  .feedback__icon {
+    font-size: calc(34px + 6 * ((100vw - 320px) / 858));
+  }
+}
+@media (any-hover: hover) {
+  .feedback__icon:hover {
+    color: #ffe1bd;
+  }
+}
+@media (min-width: 767.98px) {
+  .feedback__icon:not(:last-child) {
+    margin: 0px 20px 0px 0px;
+  }
+}
+.feedback__subscribe {
+  flex: 0 1 462px;
 }
