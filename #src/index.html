@@ -298,9 +298,18 @@
               <div class="feedback__subscribe subscribe">
                 <form data-message="subscribe" data-test action="#" class="subscribe__form">
                   <div class="subscribe__body">
-                    <input autocomplete="off" type="text" name="form[]" data-value="name" data-error="error" class="subscribe__input _req">
-                    <input autocomplete="off" type="text" name="form[]" data-value="e-mail" data-error="error" class="subscribe__input _req _email">
-                    <input autocomplete="off" type="text" name="form[]" data-value="your message" data-error="error" class="subscribe__input _req">
+                    <div class="subscribe__line">
+                      <label class="subscribe__label" for="name">name</label>
+                      <input id="name" autocomplete="off" type="text" name="form[]" data-value="" data-error="error" class="subscribe__input _req">
+                    </div>
+                    <div class="subscribe__line">
+                      <label class="subscribe__label" for="e-mail">e-mail</label>
+                      <input id="e-mail" autocomplete="off" type="text" name="form[]" data-value="" data-error="error" class="subscribe__input _req _email">
+                    </div>
+                    <div class="subscribe__line">
+                      <label class="subscribe__label" for="message">your message</label>
+                      <input id="message" autocomplete="off" type="text" name="form[]" data-value="" data-error="error" class="subscribe__input _req">
+                    </div>   
                   </div>
                   <button type="submit" class="subscribe__button button button_white">submit</button>
                 </form>

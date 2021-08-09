@@ -228,22 +228,36 @@ body._lock {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   position: relative;
 }
+.subscribe__label {
+  font-size: 18px;
+  line-height: 133.3333333333%;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+}
+.subscribe__line {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.subscribe__line:not(:last-child) {
+  margin: 0px 0px 40px 0px;
+}
 .subscribe__input {
   font-size: 18px;
   font-weight: 300;
-  padding: 0px 0px 15px 0px;
-  color: rgba(255, 255, 255, 0.4);
-  line-height: 133.3333333333%;
+  color: #fff;
   background-color: #000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease 0s;
 }
 @media (max-width: 1178px) {
   .subscribe__input {
     font-size: calc(16px + 2 * ((100vw - 320px) / 858));
   }
 }
-.subscribe__input:not(:last-child) {
-  margin: 0px 0px 40px 0px;
+.subscribe__input._focus {
+  border-color: #fff;
+  padding: 10px 0px 20px 0;
 }
 .subscribe__button {
   padding: 0px 45px;

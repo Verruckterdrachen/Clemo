@@ -59,15 +59,29 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     position: relative;
   }
+  &__label {
+    font-size: 18px;
+    line-height: 24 / 18 * 100%;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  &__line {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    &:not(:last-child) {margin: 0px 0px 40px 0px;}
+  }
   &__input {
     @include adaptiv-value("font-size", 18, 16, 1);
     font-weight: 300;
-    padding: 0px 0px 15px 0px;
-    color: rgba(255, 255, 255, 0.4);
-    line-height: 24 / 18 * 100%;
+    color: #fff; 
     background-color: #000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    &:not(:last-child) {margin: 0px 0px 40px 0px;}
+    transition: all 0.3s ease 0s;
+    &._focus {
+      border-color: #fff;
+      padding: 10px 0px 20px 0;
+    }
   }
   &__button {
     padding: 0px 45px;
