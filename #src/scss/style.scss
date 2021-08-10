@@ -117,13 +117,10 @@ body {
   &__about {
     @include adaptiv-value("padding-top", 80, 40, 1);
     @include adaptiv-value("padding-bottom", 80, 40, 1);
-    margin: 156px 0px 0px 0px;
-    @media (max-width:$md2+px){
-      margin: 80px 0px 0px 0px;
-    }
-    @media (max-width:$md3+px){
-      margin: 60px 0px 0px 0px;
-    }
+  }
+  &__statistics {
+    @include adaptiv-value("padding-top", 95, 40, 1);
+    @include adaptiv-value("padding-bottom", 95, 40, 1);
   }
 }
 //===================================================================================================================================
@@ -575,6 +572,41 @@ body {
   }
   &__subscribe {
     flex: 0 1 462px;
+  }
+}
+//============================================================================
+.statistics {
+  &__body {
+    @media (min-width:$md4+px){
+      display: flex; 
+    }
+  }
+  &__item {
+    flex: 0 1 33.333%;
+    text-align: center;
+    padding: 0px 20px;
+    @media (max-width:$md3+px){
+      padding: 0;
+      &:not(:last-child) {margin: 0px 0px 40px 0px;} 
+    }
+  }
+  &__value {
+    position: relative;
+    padding: 0px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
+    &::before{
+      content:'';
+      position: absolute;
+      width: 55px;
+      height: 2px;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%,0px);
+      background-color: $mainColor;
+    }
+  }
+  &__text {
+    line-height: 120%;
   }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
