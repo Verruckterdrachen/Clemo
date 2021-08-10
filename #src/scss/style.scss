@@ -156,6 +156,17 @@ body {
     @include adaptiv-value("padding-top", 80, 40, 1);
     @include adaptiv-value("padding-bottom", 90, 50, 1);
   }
+  &__work {
+    @include adaptiv-value("padding-top", 90, 40, 1);
+    @include adaptiv-value("padding-bottom", 90, 40, 1);
+    margin: 156px 0px 0px 0px;
+    @media (max-width:$md2+px){
+      margin: 80px 0px 0px 0px;
+    }
+    @media (max-width:$md3+px){
+      margin: 60px 0px 0px 0px;
+    }
+  }
 }
 //===================================================================================================================================
 .services {
