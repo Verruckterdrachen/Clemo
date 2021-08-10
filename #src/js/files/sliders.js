@@ -174,11 +174,11 @@ if (document.querySelector('.slider-work__body')) {
 			nextEl: '.slider-work .slider-button_next',
 			prevEl: '.slider-work .slider-button_prev',
 		},
-    /*autoplay: {
+    autoplay: {
       delay: 2500, 
       stopOnLastSlide: false, 
       disableOnInteraction: false 
-    },*/
+    },
     speed: 1500,
   });
 }

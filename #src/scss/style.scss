@@ -157,8 +157,9 @@ body {
     @include adaptiv-value("padding-bottom", 90, 50, 1);
   }
   &__work {
+    border-top: 1px solid #d8d8d8;
     @include adaptiv-value("padding-top", 90, 40, 1);
-    @include adaptiv-value("padding-bottom", 90, 40, 1);
+    @include adaptiv-value("padding-bottom", 100, 50, 1);
     margin: 156px 0px 0px 0px;
     @media (max-width:$md2+px){
       margin: 80px 0px 0px 0px;
