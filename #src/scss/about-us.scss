@@ -80,4 +80,32 @@
     }
   }
 }
+//============================================================================
+.instagram {
+  &__container {
+    max-width: 100%;
+    padding: 0;
+    @media (min-width:$md3+px){
+      padding: 0px 10px; 
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(268px,1fr));
+    @include adaptiv-value("margin-bottom", 45, 30, 1);
+  }
+  &__image {
+    background-color: #e6e6e6;
+    padding: 0px 0px 100% 0px;
+  }
+  &__button {
+    align-self: center;
+    padding: 0px 55px;
+  }
+}
 //====================================================================================================

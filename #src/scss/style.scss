@@ -122,6 +122,10 @@ body {
     @include adaptiv-value("padding-top", 95, 40, 1);
     @include adaptiv-value("padding-bottom", 95, 40, 1);
   }
+  &__instagram {
+    @include adaptiv-value("padding-top", 90, 40, 1);
+    @include adaptiv-value("padding-bottom", 100, 50, 1);
+  }
 }
 //===================================================================================================================================
 .services {
