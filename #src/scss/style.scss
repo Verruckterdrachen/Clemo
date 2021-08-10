@@ -82,6 +82,7 @@ body {
 @import "home";
 @import "about-us";
 @import "service";
+@import "work";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
@@ -150,6 +151,10 @@ body {
   &__price {
     @include adaptiv-value("padding-top", 70, 40, 1);
     @include adaptiv-value("padding-bottom", 70, 40, 1);
+  }
+  &__related {
+    @include adaptiv-value("padding-top", 80, 40, 1);
+    @include adaptiv-value("padding-bottom", 90, 50, 1);
   }
 }
 //===================================================================================================================================
@@ -669,6 +674,45 @@ body {
   &__text {
     font-weight: 300;
     line-height: 120%;
+  }
+}
+//============================================================================
+.related {
+  background-color: $primaryColor;
+}
+.slider-related {
+  position: relative;
+  &__body {
+    margin: 0px 0px 50px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    display: inline-flex;
+    font-weight: 700;
+    color: $mainColor;
+    @include adaptiv-value("font-size", 36, 24, 1);
+    line-height: 36 / 36 * 100%;
+    position: relative;
+    padding: 0px 100px 15px 0px;
+    margin: 0px 0px 10px 0px;
+    &::before{
+      content:'';
+      position: absolute;
+      width: 55px;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: $mainColor;
+    }
+  }
+  &__text {
+    line-height: 120%;
+  }
+  &__dotts {
+    .swiper-pagination-bullet {
+      margin: 0px 8px;
+    }
   }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================

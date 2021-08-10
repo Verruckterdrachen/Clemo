@@ -122,6 +122,41 @@ if (document.querySelector('.slider-team__body')) {
   });
 }
 
+if (document.querySelector('.slider-related__body')) {
+  let relatedSlider = new Swiper('.slider-related__body', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    autoHeight: false,  
+    parallax: true,
+    loop: true,
+    pagination: {
+    	el: '.slider-related__dotts',
+    	clickable: true,
+    },
+    /*autoplay: {
+      delay: 2500, 
+      stopOnLastSlide: false, 
+      disableOnInteraction: false 
+    },*/
+    speed: 1500,
+    breakpoints: {
+			320: {
+				slidesPerView: 1,
+        slidesPerGroup: 1,
+			},
+			768: {
+				slidesPerView: 2,
+        slidesPerGroup: 2,
+			},
+			992: {
+				slidesPerView: 3,
+        slidesPerGroup: 3,
+			}
+		}
+  });
+}
+
 if (document.querySelector('.slider-reviews__body')) {
   let reviewsSlider = new Swiper('.slider-reviews__body', {
     observer: true,
