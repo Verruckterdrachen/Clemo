@@ -1,0 +1,76 @@
+//====================================================================================================
+.about {
+  &__body {
+    @media (min-width:$md3+px){
+      display: flex; 
+    }
+  }
+  &__projects {
+    flex: 0 1 560px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__image {
+    padding: 0px 0px 100% 0px;
+    background-color: #e6e6e6;
+    @media (any-hover: hover){
+      &:hover{
+        .item-hover {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__title {
+    @include adaptiv-value("margin-top", 50, 35, 1); 
+    @include adaptiv-value("padding-top", 30, 15, 1); 
+    @include adaptiv-value("font-size", 40, 32, 1);
+    line-height: 54 / 40 * 100%;
+    font-weight: 700;
+    position: relative;
+    &::before{
+      content:'';
+      position: absolute;
+      width: 55px;
+      height: 2px;
+      left: 0;
+      top: 0;
+      background-color: $mainColor;
+    }
+  }
+  &__content {
+    flex: 0 1 50%;
+    @media (min-width:$md3+px){
+      @include adaptiv-value("padding-left", 95, 0, 1); 
+    }
+  }
+  &__text {
+    color: $grayColor;
+    @include adaptiv-value("font-size", 18, 16, 1);
+    line-height: 27 / 18 * 100%;
+    @include adaptiv-value("margin-bottom", 45, 20, 1); 
+    @include adaptiv-value("padding-top", 45, 20, 1); 
+    p {
+      &:not(:last-child) {
+        margin: 0px 0px 25px 0px;
+        @media (max-width:$md3+px){
+          margin: 0px 0px 15px 0px; 
+        }
+      }
+    }    
+    @media (min-width:$md3+px){
+      position: relative;
+      &::before{
+        content:'';
+        position: absolute;
+        width: 55px;
+        height: 2px;
+        left: 0;
+        top: 0;
+        background-color: $mainColor;
+      } 
+    }
+  }
+}
+//====================================================================================================

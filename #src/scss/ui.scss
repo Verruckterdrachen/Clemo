@@ -26,6 +26,10 @@
   &__title {
     @include adaptiv-value("margin-bottom", 90, 40, 1);
   }
+  &_border {
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+  }
 }
 //============================================================================
 .swiper-pagination-bullets {
