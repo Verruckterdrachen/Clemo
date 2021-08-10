@@ -1,0 +1,102 @@
+//====================================================================================================
+.blog {
+  &__container {}
+  &__body {
+    display: flex;
+    flex-direction: column;
+    max-width: 756px;
+    margin: 0px auto;
+  }
+  &__date {
+    text-align: center;
+    line-height: 120%;
+    @include adaptiv-value("margin-bottom", 90, 30, 1);
+  }
+  &__image {
+    background-color: #e5e5e5;
+    padding: 0px 0px 480px/756px * 100% 0px;
+  }
+  &__text {
+    @include adaptiv-value("font-size", 18, 16, 1);
+    color: $grayColor;
+    line-height: 27 / 18 * 100%;
+    &_primary {
+      position: relative;
+      padding: 40px 0px 0px 0px;
+      margin-top: 45px;
+      &::before{
+        content:'';
+        position: absolute;
+        width: 55px;
+        height: 2px;
+        left: 0;
+        top: 0;
+        background-color: $mainColor;
+      }
+    }
+    p {
+      &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 25, 15, 1);
+      }
+    }
+    @include adaptiv-value("margin-bottom", 70, 40, 1);
+  }
+  &__subtitle {
+    font-weight: 100;
+    text-align: center;
+    @include adaptiv-value("font-size", 48, 32, 1);
+    line-height: 48 / 48 * 100%;
+    margin: 0px 0px 30px 0px;
+  }
+  &__paragraph {
+    @media (min-width:$md2+px){
+      padding: 0px 0px 0px 40px;
+      position: relative;
+      &::before{
+        content:'';
+        position: absolute;
+        width: 55px;
+        height: 2px;
+        left: -25px;
+        top: 10px;
+        background-color: $mainColor;
+      } 
+    }
+  }
+  &__title {
+    font-weight: 400;
+    @include adaptiv-value("font-size", 40, 28, 1);
+    line-height: 54 / 40 * 100%;
+    position: relative;
+    padding: 20px 0px 0px 0px;
+    @include adaptiv-value("margin-bottom", 70, 40, 1);
+    @media (min-width: 1200px){
+      margin: 0px 0px 70px -165px; 
+    }
+    &::before{
+      content:'';
+      position: absolute;
+      width: 55px;
+      height: 2px;
+      left: 0;
+      top: 0;
+      background-color: $mainColor;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    color: #000;
+    @include adaptiv-value("font-size", 40, 34, 1);
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover){
+      &:hover{
+        color: $primaryColor;
+      }
+    }
+    &:not(:last-child) {margin: 0px 20px 0px 0px;} 
+  }
+}
+//====================================================================================================
