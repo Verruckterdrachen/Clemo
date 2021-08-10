@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"Home"
-	})
+	 <head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 	<body>
 		<div class="wrapper">
-			@@include('_header.html',{
-        "link":"-1"
-      })
+			<header class="header">
+	<div class="header__wrapper">
+    <div class="header__container _container">
+      <div class="header__body">
+        <a href="index.html" class="header__logo">clemo.</a>
+        <div class="header__menu menu">
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="about-us.html" class="menu__link ">about us</a></li>
+              <li class="menu__item"><a href="services.html" class="menu__link ">services</a></li>
+              <li class="menu__item"><a href="" class="menu__link">works</a></li>
+              <li class="menu__item"><a href="" class="menu__link">blog</a></li>
+              <li class="menu__item"><a href="" class="menu__link">contact</a></li>
+            </ul>
+          </nav>
+          <button type="button" class="menu__icon icon-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 			<main class="page">
         <section class="page__hello hello">
           <div class="hello__container _container">
@@ -41,7 +70,7 @@
             <h2 class="section__title title-section">what we do?</h2>
             <div class="services__body">
               <div class="services__item item-services">
-                <a href="service.html" class="item-services__image _ibg">               
+                <a href="" class="item-services__image _ibg">               
                   <!--<img src="img" alt="">-->
                   <div class="item-hover">
                     <h3 class="item-hover__title title-item">golfino awards</h3>
@@ -49,7 +78,7 @@
                   </div> 
                 </a>
                 <div class="item-services__content">
-                  <a href="service.html" class="item-services__head">
+                  <a href="" class="item-services__head">
                     <h4 class="item-services__suptitle">creative</h4>
                     <h3 class="item-services__title">kitchen</h3>
                   </a>
@@ -57,7 +86,7 @@
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                     <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
                   </div>
-                  <a href="service.html" class="item-services__button button button_primary">learn more</a>
+                  <a href="" class="item-services__button button button_primary">learn more</a>
                 </div>
               </div>
               <div class="services__item item-services">
@@ -318,9 +347,41 @@
           </div>
         </section>
 			</main>
-			@@include('_footer.html',{})
+			<footer class="footer">
+	<div class="footer__container _container">
+    <div class="footer__body">
+      <div class="footer__title">© 2016 clemo.</div>
+      <div class="footer__copy">all rights reserved</div>
+    </div>
+	</div>
+</footer>
 		</div>
-		@@include('_popup.html',{})
-		@@include('_js.html',{})
+		<div class="popup popup_popup">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_subscribe-message">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close"></div>
+		</div>
+	</div>
+</div>
+<div class="popup popup_video">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close popup__close_video"></div>
+			<div class="popup__video _video"></div>
+		</div>
+	</div>
+</div>
+
+		<!-- Swiper -->
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
 	</body>
 </html>

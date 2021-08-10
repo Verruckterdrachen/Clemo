@@ -195,6 +195,7 @@ body._lock {
   }
 }
 .button_white {
+  color: #000;
   background-color: #fff;
 }
 @media (any-hover: hover) {
@@ -624,6 +625,9 @@ textarea.input {
   .title-item {
     font-size: calc(26px + 14 * ((100vw - 320px) / 858));
   }
+}
+.title-item_white {
+  color: #fff;
 }
 
 .section__title {
@@ -2496,6 +2500,114 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   padding: 0px 55px;
 }
 
+.price {
+  background-color: #000;
+}
+.price__body {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .price__body {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media (min-width: 767.98px) {
+  .price__body {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1178px) {
+  .price__body {
+    padding-left: calc(0px + 160 * ((100vw - 320px) / 858));
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1178px) {
+  .price__body {
+    padding-right: calc(0px + 160 * ((100vw - 320px) / 858));
+  }
+}
+.price__content {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}
+@media (max-width: 900px) {
+  .price__content {
+    justify-content: center;
+    margin: 0px 0px 30px 0px;
+  }
+}
+.price__title {
+  white-space: nowrap;
+  color: #fff;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 140%;
+}
+@media (max-width: 1178px) {
+  .price__title {
+    font-size: calc(22px + 8 * ((100vw - 320px) / 858));
+  }
+}
+@media (min-width: 767.98px) {
+  .price__title {
+    position: relative;
+    padding-right: 100px;
+    margin-right: 50px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1178px) {
+  .price__title {
+    padding-right: calc(50px + 50 * ((100vw - 320px) / 858));
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1178px) {
+  .price__title {
+    margin-right: calc(0px + 50 * ((100vw - 320px) / 858));
+  }
+}
+@media (min-width: 767.98px) {
+  .price__title::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 2px;
+    right: 0;
+    top: 50%;
+    transform: translate(0px, -50%);
+    background-color: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  .price__title::after {
+    padding: 0px 10px;
+    content: "-";
+    right: 0;
+    top: 50%;
+    transform: translate(0px, -50%);
+  }
+}
+.price__value {
+  white-space: nowrap;
+  color: #656565;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 140%;
+}
+@media (max-width: 1178px) {
+  .price__value {
+    font-size: calc(22px + 8 * ((100vw - 320px) / 858));
+  }
+}
+@media (max-width: 900px) {
+  .price__button {
+    align-self: center;
+  }
+}
+
 .page {
   flex: 1 1 auto;
 }
@@ -2518,6 +2630,25 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media (max-width: 1178px) {
   .page__services {
     padding-top: calc(40px + 50 * ((100vw - 320px) / 858));
+  }
+}
+.page__services_primary {
+  margin: 156px 0px 0px 0px;
+  padding-bottom: 145px;
+}
+@media (max-width: 991.98px) {
+  .page__services_primary {
+    margin: 80px 0px 0px 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page__services_primary {
+    margin: 60px 0px 0px 0px;
+  }
+}
+@media (max-width: 1178px) {
+  .page__services_primary {
+    padding-bottom: calc(50px + 95 * ((100vw - 320px) / 858));
   }
 }
 .page__works {
@@ -2611,6 +2742,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media (max-width: 1178px) {
   .page__instagram {
     padding-bottom: calc(50px + 50 * ((100vw - 320px) / 858));
+  }
+}
+.page__price {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+@media (max-width: 1178px) {
+  .page__price {
+    padding-top: calc(40px + 30 * ((100vw - 320px) / 858));
+  }
+}
+@media (max-width: 1178px) {
+  .page__price {
+    padding-bottom: calc(40px + 30 * ((100vw - 320px) / 858));
   }
 }
 
@@ -3211,6 +3356,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 }
 .statistics__value {
+  font-weight: 700;
   position: relative;
   padding: 0px 0px 15px 0px;
   margin: 0px 0px 15px 0px;
@@ -3226,5 +3372,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-color: #000;
 }
 .statistics__text {
+  font-weight: 300;
   line-height: 120%;
 }
