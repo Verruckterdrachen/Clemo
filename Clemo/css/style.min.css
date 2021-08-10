@@ -2962,6 +2962,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: flex;
   flex-direction: column;
 }
+.services__content {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 50px 0px;
+}
+.services__button {
+  align-self: center;
+}
 
 @media (min-width: 767.98px) {
   .item-services {
@@ -3039,14 +3047,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .item-services__head {
   display: inline-block;
   color: #000;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   padding-bottom: 25px;
   position: relative;
   transition: color 0.3s ease 0s;
 }
 @media (max-width: 1178px) {
   .item-services__head {
-    margin-bottom: calc(12.5px + 12.5 * ((100vw - 320px) / 858));
+    margin-bottom: calc(12.5px + 17.5 * ((100vw - 320px) / 858));
   }
 }
 @media (max-width: 1178px) {
@@ -3077,6 +3085,22 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 @media (max-width: 1178px) {
   .item-services__suptitle {
     font-size: calc(22px + 8 * ((100vw - 320px) / 858));
+  }
+}
+.item-services__subtitle {
+  font-size: 18px;
+  line-height: 12%;
+  margin: 25px 0px 0px 0px;
+  padding-bottom: 25px;
+}
+@media (max-width: 1178px) {
+  .item-services__subtitle {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 858));
+  }
+}
+@media (max-width: 1178px) {
+  .item-services__subtitle {
+    padding-bottom: calc(15px + 10 * ((100vw - 320px) / 858));
   }
 }
 .item-services__title {
@@ -3241,33 +3265,33 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   align-self: center;
 }
 
-.menu-works {
+.menu-works, .menu-services {
   margin-bottom: 90px;
 }
 @media (max-width: 1178px) {
-  .menu-works {
+  .menu-works, .menu-services {
     margin-bottom: calc(30px + 60 * ((100vw - 320px) / 858));
   }
 }
-.menu-works__list {
+.menu-works__list, .menu-services__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.menu-works__item {
+.menu-works__item, .menu-services__item {
   margin: 0px 11px;
   padding: 5px 0;
 }
-.menu-works__link {
+.menu-works__link, .menu-services__link {
   color: #989898;
   line-height: 133.3333333333%;
   transition: color 0.3s ease 0s;
 }
-.menu-works__link._active {
+.menu-works__link._active, .menu-services__link._active {
   color: #000;
 }
 @media (any-hover: hover) {
-  .menu-works__link:hover {
+  .menu-works__link:hover, .menu-services__link:hover {
     text-decoration: underline;
   }
 }
